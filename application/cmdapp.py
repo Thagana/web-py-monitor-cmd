@@ -30,9 +30,9 @@ def check_status(url, verbose):
 	""" Get Server status """
 	try:
 		r = requests.get(url)
-		if verbose == 'False':
+		if verbose == 'False' and r.status_code == 200:
 			click.echo("Servers are not down Every a-okay! ")
-		elif verbose == 'True':
+		elif verbose == 'True' and r.status_code == 200:
 			click.echo(r.headers)
 		else:
 			click.echo("Seems like servers are down... send email?")
