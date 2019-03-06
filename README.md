@@ -15,7 +15,7 @@ Servers are not down Every a-okay!
 ```
 #### Sending an email
 ```bash
-python run.py send-mail
+$ python run.py send-mail
 Enter Your Email:
 Enter Your Password:
 Enter Subject:
